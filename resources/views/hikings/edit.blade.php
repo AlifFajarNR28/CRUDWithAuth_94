@@ -33,7 +33,6 @@
                 <input type="email" name="email" class="form-control" placeholder="Eamil" value="{{ $hiking->email }}">
             </div>
         </div>
-        </div>
         <div class="row">
             <div class="col mb-3">
                 <label class="form-label">No. HP</label>
