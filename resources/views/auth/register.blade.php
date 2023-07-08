@@ -20,22 +20,23 @@
 
 <body class="bg-gradient-primary">
     <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-9">
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-                    <div class="col-lg-7">
+                    <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Buat Akun!</h1>
                             </div>
                             <form action="{{ route('register.save') }}" method="POST" class="user">
                                 @csrf
                                 <div class="form-group">
                                     <input name="name" type="text"
                                         class="form-control form-control-user @error('name')is-invalid @enderror"
-                                        id="exampleInputName" placeholder="Name">
+                                        id="exampleInputName" placeholder="Nama">
                                     @error('name')
                                         <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror
@@ -43,7 +44,7 @@
                                 <div class="form-group">
                                     <input name="email" type="email"
                                         class="form-control form-control-user @error('email')is-invalid @enderror"
-                                        id="exampleInputEmail" placeholder="Email Address">
+                                        id="exampleInputEmail" placeholder="Alamat Email">
                                     @error('email')
                                         <span class="invalid-feedback">{{ $message }}</span>
                                     @enderror
@@ -60,7 +61,7 @@
                                     <div class="col-sm-6">
                                         <input name="password_confirmation" type="password"
                                             class="form-control form-control-user @error('password_confirmation')is-invalid @enderror"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                            id="exampleRepeatPassword" placeholder="Ulangi Password">
                                         @error('password_confirmation')
                                             <span class="invalid-feedback">{{ $message }}</span>
                                         @enderror
@@ -71,7 +72,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="{{ route('login') }}">Already have an account? Login!</a>
+                                <a class="small" href="{{ route('login') }}">Sudah punya akun? Login!</a>
                             </div>
                         </div>
                     </div>
